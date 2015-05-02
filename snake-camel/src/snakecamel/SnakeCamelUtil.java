@@ -21,7 +21,6 @@ public class SnakeCamelUtil {
 				if (sb.length() > 0) {
 					sb.append("_");
 				}
-				//sb.append(Character.toLowerCase(c));
 				j = i;
 			}
 		}
@@ -35,12 +34,5 @@ public class SnakeCamelUtil {
 		String rest = s.substring(1);
 		return upperFirst + rest;
 	}
-
-/*	static String uncapitalize(String s) {
-		char first = s.charAt(0);
-		char lowerFirst = Character.toLowerCase(first);
-		String rest = s.substring(1);
-		return lowerFirst + rest;
-	}*/
 	
 }
