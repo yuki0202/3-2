@@ -1,5 +1,8 @@
 package snakecamel;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 public class SnakeCamelUtil {
 
 	public static String snakeToCamelcase(String snake_case) {
@@ -29,10 +32,21 @@ public class SnakeCamelUtil {
 	}
 	
 	static String capitalize(String s) {
+		if(s.length()==0){ return "";}
+		else{
 		char first = s.charAt(0);
 		char upperFirst = Character.toUpperCase(first);
 		String rest = s.substring(1);
 		return upperFirst + rest;
+		}
+	}
+	
+	static String uncapitalize(String s) {
+		if(s.length()==0){return "";}
+		char first = s.charAt(0);
+		char lowerFirst = Character.toLowerCase(first);
+		String rest = s.substring(1);
+		return lowerFirst + rest;
 	}
 	
 }
